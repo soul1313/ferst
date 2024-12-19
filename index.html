@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мини-анкета</h1>
+        
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Отзыв:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <button type="button" id="showModalBtn">Показать информацию</button>
+        </form>
+    </div>
+
+    <!-- Модальное окно с картинкой и информацией -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Ваша информация</h2>
+
+            <!-- Картинка -->
+            <div class="modal-image-container">
+                <img src="https://ifellow.ru/upload/iblock/653/za46utqmt5mezktehi4hs5vi4jfoslp9.png" alt="Изображение" class="modal-image">
+            </div>
+
+            <!-- Информация -->
+            <div id="modalContent"></div>
+
+            <!-- Кнопки -->
+            <div class="modal-actions">
+                <button id="saveBtn">Сохранить</button>
+                <button id="shareBtn">Поделиться</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
